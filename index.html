@@ -271,11 +271,38 @@
             font-size: 0.9rem;
         }
 
-        /* Spotlight/Art Grid (Four items) */
+        /* Spotlight Layout with Featured Image Layout */
+        .spotlight-layout {
+            display: flex;
+            gap: 30px;
+        }
+
+        .spotlight-featured-img {
+            width: 35%;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            object-fit: cover;
+        }
+
         .spotlight-grid {
+            width: 65%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .spotlight-layout {
+                flex-direction: column;
+            }
+            .spotlight-featured-img {
+                width: 100%;
+                max-height: 450px;
+            }
+            .spotlight-grid {
+                width: 100%;
+            }
         }
 
         .spotlight-card {
@@ -472,8 +499,6 @@
             <p>Senior HFC Design Engineer & GIS Analyst | Geoscientist | Educator</p>
             <div class="contact-info">
                 <span>📍 Skiatook, Oklahoma, United States</span>
-                <span>•</span>
-                <span>✉️ <a href="mailto:kenardu@yahoo.com" style="color: #cbd5e1;">kenardu@yahoo.com</a></span>
             </div>
             <div class="social-links">
                 <a class="btn-social" href="https://linkedin.com/in/arnold-kedia-0456887b" target="_blank">LinkedIn</a>
@@ -554,34 +579,39 @@
         <!-- Spotlight Highlights -->
         <section>
             <h2 class="section-title">CoxOne Employee Spotlight</h2>
-            <div class="spotlight-grid">
-                <div class="spotlight-card">
-                    <img alt="Mapping software" src="https://images.unsplash.com/photo-1541462608141-2ff01dd914e0?auto=format&fit=crop&w=400&q=80">
-                    <div class="spotlight-info">
-                        <h4>💡 "Accidental" GIS</h4>
-                        <p>Taught myself GIS software out of pure resourcefulness as a student when I couldn't afford a cartographer.</p>
+            <div class="spotlight-layout">
+                <!-- Integrated Spotlight Article Snapshot -->
+                <img class="spotlight-featured-img" alt="CoxOne Spotlight Article Snippet" src="208096.png">
+                
+                <div class="spotlight-grid">
+                    <div class="spotlight-card">
+                        <img alt="Mapping software" src="https://images.unsplash.com/photo-1541462608141-2ff01dd914e0?auto=format&fit=crop&w=400&q=80">
+                        <div class="spotlight-info">
+                            <h4>💡 "Accidental" GIS</h4>
+                            <p>Taught myself GIS software out of pure resourcefulness as a student when I couldn't afford a cartographer.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="spotlight-card">
-                    <img alt="Artist palette" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=400&q=80">
-                    <div class="spotlight-info">
-                        <h4>🎨 Two Canvases</h4>
-                        <p>A unique balance: designing telecom routing grids on my monitors, and painting landscape fine art on traditional canvas.</p>
-                        <a href="https://www.instagram.com/artkedia?igsh=MXZjNTNicWhwaHlxMQ==" target="_blank" style="display: inline-block; margin-top: 10px; font-size: 0.8rem; font-weight: 600;">View Portfolio on Instagram →</a>
+                    <div class="spotlight-card">
+                        <img alt="Artist palette" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=400&q=80">
+                        <div class="spotlight-info">
+                            <h4>🎨 Two Canvases</h4>
+                            <p>A unique balance: designing telecom routing grids on my monitors, and painting landscape fine art on traditional canvas.</p>
+                            <a href="https://www.instagram.com/artkedia?igsh=MXZjNTNicWhwaHlxMQ==" target="_blank" style="display: inline-block; margin-top: 10px; font-size: 0.8rem; font-weight: 600;">View Portfolio on Instagram →</a>
+                        </div>
                     </div>
-                </div>
-                <div class="spotlight-card">
-                    <img alt="Grounded perspective" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80">
-                    <div class="spotlight-info">
-                        <h4>🌍 Resilience</h4>
-                        <p>Pivoting with optimism after war disrupted my PhD plans. Solving real-world spatial problems never feels like hard work.</p>
+                    <div class="spotlight-card">
+                        <img alt="Grounded perspective" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80">
+                        <div class="spotlight-info">
+                            <h4>🌍 Resilience</h4>
+                            <p>Pivoting with optimism after war disrupted my PhD plans. Solving real-world spatial problems never feels like hard work.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="spotlight-card">
-                    <img alt="Team synergy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80">
-                    <div class="spotlight-info">
-                        <h4>🏆 Leadership</h4>
-                        <p>Commended for bringing an "infectious smile" and rapid mastery of complex FTTH concepts to the core utility design department.</p>
+                    <div class="spotlight-card">
+                        <img alt="Team synergy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80">
+                        <div class="spotlight-info">
+                            <h4>🏆 Leadership</h4>
+                            <p>Commended for bringing an "infectious smile" and rapid mastery of complex FTTH concepts to the core utility design department.</p>
+                        </div>
                     </div>
                 </div>
             </div>
