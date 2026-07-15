@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnold Chi Kedia - Portfolio</title>
+    <style>
+        :root {
+            --primary: #0F2027;
+            --secondary: #203A43;
+            --accent: #2C5364;
+            --text-dark: #1E293B;
+            --text-light: #F8FAFC;
+            --emerald: #10B981;
+            --amber: #F59E0B;
+            --card-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation Header */
+        header {
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            color: var(--text-light);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn:hover {
+            background-color: var(--text-light);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Container & Grid Layouts */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Modern Card Styling */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .card h3 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        /* Timeline / Personal Story styling */
+        .timeline-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px rgba(44, 83, 100, 0.2);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* Publications List styling */
+        .pub-list {
+            list-style: none;
+        }
+
+        .pub-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .pub-item:last-child {
+            border-bottom: none;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .pub-authors {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 5px;
+        }
+
+        .pub-journal {
+            font-weight: 500;
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .pub-link {
+            color: var(--emerald);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .pub-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Arnold Chi Kedia</h1>
+            <p>Senior HFC Design Engineer & GIS Analyst | Geoscientist | Educator</p>
+            <div class="social-links">
+                <a class="btn" href="https://news.asu.edu/20210114-asu-graduate-maps-new-life-us-finds-family-classmates" target="_blank">ASU News Feature</a>
+                <a class="btn" href="https://gischatpodcast.buzzsprout.com/2203211/13697204" target="_blank">GIS Chat Podcast Ep. 4</a>
+                <a class="btn" href="https://sciprofiles.com/profile/1499411" target="_blank">SciProfiles Research Portal</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Core Pillars Section -->
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Utility Design & GIS</h2>
+                    <h3>Cox Communications</h3>
+                </div>
+                <p>Developing network architecture with a high-degree of spatial accuracy. Notable innovations include designing and deploying a <strong>nationwide rock scale grid</strong> to streamline excavation cost models across telecommunication routes.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>Geological Sciences</h2>
+                    <h3>Ph.D. Candidate & Researcher</h3>
+                </div>
+                <p>Specializing in the geochemistry, microchemistry, and structural evolution of High-Purity Quartz (HPQ) veins, hydrothermal mineral systems, and petrogenesis in Pan-African structural systems.</p>
+            </div>
+        </div>
+
+        <!-- Personal Story & Resilience Timeline -->
+        <div class="timeline-section">
+            <h2 class="section-title">A Journey of Resilience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2017</div>
+                    <p><strong>Visiting Scholar at ASU:</strong> Traveled to Arizona State University on a research grant as a geology doctoral student from the University of Buea, Cameroon. As civil conflict erupted in his home region, safety concerns prevented his return, prompting a complete life rebuild in the US.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2020</div>
+                    <p><strong>Academic & Communal Anchor:</strong> Enrolled in ASU's Master of Advanced Study in GIS (MAS-GIS). Balanced working full-time with a 4.0 GPA, receiving the prestigious <em>Balling Family GIS Fellowship Endowment</em>, while dedicating his personal time to tutoring, reviewing resumes, and prepping classmates for successful careers.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <p><strong>Telecom Career Launch:</strong> Began his career at Cox Communications as an HFC Design Engineer & GIS Analyst, while continuing to share his expertise with the next generation as a Part-time Faculty Associate at ASU.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Present (2026)</div>
+                    <p><strong>Leadership & Innovation:</strong> Continues to innovate as a Senior HFC Design Engineer at Cox, executing major spatial initiatives like the nationwide rock excavation model, while actively co-authoring mineralogical manuscripts.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scientific Publications -->
+        <div class="timeline-section">
+            <h2 class="section-title">Selected Publications</h2>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <div class="pub-title">An Integrated Spectral-Structural Workflow for Invasive Vegetation Mapping in an Arid Region Using Drones</div>
+                    <div class="pub-authors">Arnold Chi Kedia, Brandi Kapos, Songmei Liao, Jacob Draper, Justin Eddinger, Christopher Updike, Amy E. Frazier</div>
+                    <div class="pub-journal">Drones, MDPI (2021)</div>
+                    <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
+                        Developing a highly accurate workflow integrating multispectral drone photography with structural terrain models, raising targeted plant classification accuracy along the Salt River to 93%.
+                    </p>
+                    <a class="pub-link" href="https://doi.org/10.3390/drones5010019" target="_blank">View Publication (DOI: 10.3390/drones5010019) →</a>
+                </li>
+                
+                <li class="pub-item">
+                    <div class="pub-title">The Potential of Quartzitic Veins in SW Cameroon for High-Purity Quartz</div>
+                    <div class="pub-authors">Ngambu Aloysius Afahnwie, Arnold Chi Kedia, Cheo Emmanuel Suh, Cyrille Sigue, Elisha Mutum Shemang</div>
+                    <div class="pub-journal">International Journal of Geosciences (2022)</div>
+                    <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
+                        Mapping and utilizing X-ray microtomography, SEM, and electron microprobes to evaluate trace elements and inclusions within the Supe quartzitic veins for semiconductor and solar industry suitability.
+                    </p>
+                    <a class="pub-link" href="https://doi.org/10.4236/ijg.2022.134015" target="_blank">View Publication (DOI: 10.4236/ijg.2022.134015) →</a>
+                </li>
+
+                <li class="pub-item">
+                    <div class="pub-title">Geochemical and Textural Evidence for the Hydrothermal Origin of Tourmaline-Rutile Assemblages in the Supe Area, Southwestern Cameroon</div>
+                    <div class="pub-authors">Ngambu Aloysius Afahnwie, Arnold Chi Kedia, Cheo Emmanuel Suh, Cyrille Sigue</div>
+                    <div class="pub-journal">Journal of the Cameroon Academy of Sciences (2026)</div>
+                    <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
+                        Deciphering structural control, fluid history, and micro-chemical evolution of rutilated quartz specimens and tourmaline crystallization.
+                    </p>
+                    <a class="pub-link" href="https://sciprofiles.com/profile/1499411" target="_blank">View SciProfiles Profile →</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Arnold Chi Kedia. Built with precision and creativity.</p>
+    </footer>
+
+</body>
+</html>
