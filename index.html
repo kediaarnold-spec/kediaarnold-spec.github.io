@@ -137,7 +137,7 @@
             font-weight: 500;
         }
 
-        /* Timeline / Personal Story styling */
+        /* Spotlight & Timeline Section styling */
         .timeline-section {
             background: var(--card-bg);
             border-radius: 12px;
@@ -196,6 +196,28 @@
             color: var(--accent);
             margin-bottom: 5px;
             font-size: 0.95rem;
+        }
+
+        /* Feature Cards Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--emerald);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .feature-box h4 {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
         }
 
         /* Publications List styling */
@@ -283,9 +305,10 @@
             <h1>Arnold Chi Kedia</h1>
             <p>Senior HFC Design Engineer & GIS Analyst | Geoscientist | Educator</p>
             <div class="social-links">
-                <a class="btn" href="https://news.asu.edu/20210114-asu-graduate-maps-new-life-us-finds-family-classmates" target="_blank">ASU News Feature</a>
-                <a class="btn" href="https://www.abc15.com/news/state/drones-and-a-i-hunting-down-invasive-plants-at-salt-river" target="_blank">ABC15 News Feature</a>
-                <a class="btn" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">ResearchGate Profile</a>
+                <a class="btn" href="https://news.asu.edu/20210114-asu-graduate-maps-new-life-us-finds-family-classmates" target="_blank">ASU News Profile</a>
+                <a class="btn" href="https://share.google/AnyWBY5AVDqVb4k8M" target="_blank">The New Normal (ASU News)</a>
+                <a class="btn" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">ResearchGate</a>
+                <a class="btn" href="https://scholar.google.com/citations?user=Gg_Qz1kAAAAJ" target="_blank">Google Scholar</a>
             </div>
         </div>
     </header>
@@ -311,35 +334,76 @@
             </div>
         </div>
 
-        <!-- Media Appearances (Podcast & News) -->
+        <!-- CoxOne Employee Spotlight Section -->
         <div class="timeline-section">
-            <h2 class="section-title">Media & Podcast Appearances</h2>
+            <h2 class="section-title">CoxOne Employee Spotlight</h2>
+            <p style="text-align: center; color: #475569; max-width: 800px; margin: 0 auto 25px auto;">
+                Featured internally at Cox Communications, this spotlight piece highlights my journey, work ethic, and the crossover between science, engineering, and personal art.
+            </p>
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h4>💡 The "Accidental" GIS Origin</h4>
+                    <p style="font-size: 0.95rem; color: #334155;">
+                        Driven by necessity, I taught myself GIS software as a student simply because I couldn't afford to hire a cartographer for a final mapping project. That fundamental resourcefulness sparked a lifelong spatial analysis passion and paved the way to my current network engineering roles.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h4>🎨 The Two Canvases Concept</h4>
+                    <p style="font-size: 0.95rem; color: #334155;">
+                        "My two favorite canvases"—the digital spatial monitors where I map physical plant networks for Cox, and the traditional physical canvas where I create oil and acrylic landscape paintings. A beautiful marriage of logical precision and creative fine art.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h4>🌍 Resilience & Perspective</h4>
+                    <p style="font-size: 0.95rem; color: #334155;">
+                        Rebuilding a path after geopolitical conflict disrupted my PhD plans in Cameroon taught me the power of maintaining an unwavering positive outlook. When your core daily task is solving real-world challenges, work never feels like "work work"—it is just incredibly fun.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h4>🏆 Leadership Recognition</h4>
+                    <p style="font-size: 0.95rem; color: #334155;">
+                        Highly commended by HFC/Access Design Supervisor Nicole Stubbs for bringing an "infectious smile," enthusiasm, and rapid mastery of Fiber to the Home (FTTH) concepts immediately into the department environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Media & Press Section -->
+        <div class="timeline-section">
+            <h2 class="section-title">Media & Podcast Features</h2>
             <ul class="pub-list">
+                <li class="pub-item">
+                    <div class="pub-title">Drones and A.I. Hunting Down Invasive Plants at Salt River</div>
+                    <div class="pub-journal">ABC15 Arizona News (UAS & Conservation Feature)</div>
+                    <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
+                        An inside look at how high-precision drone technology, multispectral sensors, and machine learning models identified invasive species (giant reed and saltcedar) with 93% accuracy along the Salt River.
+                    </p>
+                    <a class="pub-link" href="https://www.abc15.com/news/state/drones-and-a-i-hunting-down-invasive-plants-at-salt-river" target="_blank" style="margin-right: 15px;">Read ABC15 Article →</a>
+                    <a class="pub-link" href="https://share.google/yW0ZIHGgFZIQ0rhd0" target="_blank">Watch ASU Drone Feature Video →</a>
+                </li>
                 <li class="pub-item">
                     <div class="pub-title">GIS Chat Podcast Ep. 4: Building a Career in Telecom GIS</div>
                     <div class="pub-journal">With Jazzmen Wilson</div>
                     <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
-                        An honest and informal conversation on navigating the early career path of a GIS designer, transitioning fields from applied geology in Cameroon, and entering the telecommunications industry in the United States.
+                        Discussing my transition from applied geology to utility telecom GIS, sharing advice with emerging GIS students on breaking into corporate technical sectors.
                     </p>
-                    <a class="pub-link" href="https://gischatpodcast.buzzsprout.com/2203211/13697204" target="_blank">Listen on Buzzsprout →</a>
+                    <a class="pub-link" href="https://gischatpodcast.buzzsprout.com/2203211/13697204" target="_blank">Listen to Episode 4 →</a>
                 </li>
-                
                 <li class="pub-item">
-                    <div class="pub-title">GIS Chat Podcast (Guest Return): Updates & Nationwide Rock Scale Grid Project</div>
-                    <div class="pub-journal">With Jazzmen Wilson (March 2026)</div>
+                    <div class="pub-title">GIS Chat Podcast: Arnold Kedia is Back!</div>
+                    <div class="pub-journal">With Jazzmen Wilson (March 2026 Alumni Update)</div>
                     <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
-                        Returning to the show to discuss updates on advancing to Senior HFC Design Engineer at Cox Communications and designing a custom nationwide rock scale grid to dynamically model and assess broadband excavation parameters.
+                        Returning to the show to cover recent professional updates, including promotion milestones, relocating, and designing a nationwide rock excavation database model for Cox.
                     </p>
-                    <a class="pub-link" href="https://gischatpodcast.buzzsprout.com/" target="_blank">Listen to GIS Chat Podcast →</a>
+                    <a class="pub-link" href="https://gischatpodcast.buzzsprout.com/" target="_blank">Listen to Podcast Update →</a>
                 </li>
-
                 <li class="pub-item">
-                    <div class="pub-title">ABC15 Feature: Drones and A.I. Hunting Down Invasive Plants at Salt River</div>
-                    <div class="pub-journal">ABC15 Arizona News (Television Feature)</div>
+                    <div class="pub-title">ArcGIS StoryMap: Exploring Bamenda, Cameroon</div>
+                    <div class="pub-journal">ArcGIS Online Spatial Storytelling</div>
                     <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
-                        Highlighting the innovative environmental work with ASU programming and developing sensor systems that match unique spectral signatures with machine learning to identify invasive plant species along the Salt River with 93% accuracy.
+                        An interactive, maps-driven exploration detailing the unique geomorphology, geology, and landscape elements of my childhood hometown.
                     </p>
-                    <a class="pub-link" href="https://www.abc15.com/news/state/drones-and-a-i-hunting-down-invasive-plants-at-salt-river" target="_blank">Read the ABC15 Feature & Watch Broadcast →</a>
+                    <a class="pub-link" href="https://storymaps.arcgis.com/stories/7278287a984d4c4fadde31c9fe863755" target="_blank">View StoryMap →</a>
                 </li>
             </ul>
         </div>
@@ -370,6 +434,11 @@
         <!-- Scientific Publications -->
         <div class="timeline-section">
             <h2 class="section-title">Selected Publications</h2>
+            <p style="text-align: center; color: #475569; margin-bottom: 25px;">
+                Find my complete bibliography on open research indexing services: 
+                <a href="https://scholar.google.com/citations?user=Gg_Qz1kAAAAJ" target="_blank" style="color: var(--emerald); font-weight: 600; text-decoration: none; margin-left: 5px;">Google Scholar Profile</a> | 
+                <a href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank" style="color: var(--emerald); font-weight: 600; text-decoration: none; margin-left: 5px;">ResearchGate Profile</a>
+            </p>
             <ul class="pub-list">
                 <li class="pub-item">
                     <div class="pub-title">An Integrated Spectral-Structural Workflow for Invasive Vegetation Mapping in an Arid Region Using Drones</div>
@@ -398,7 +467,7 @@
                     <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
                         Deciphering structural control, fluid history, and micro-chemical evolution of rutilated quartz specimens and tourmaline crystallization.
                     </p>
-                    <a class="pub-link" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">View Research Profile on ResearchGate →</a>
+                    <a class="pub-link" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">View on ResearchGate →</a>
                 </li>
             </ul>
         </div>
