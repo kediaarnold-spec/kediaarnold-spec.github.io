@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnold Chi Kedia - Portfolio</title>
+    <title>Arnold Chi Kedia - Professional Portfolio</title>
     <style>
         :root {
             --primary: #0F2027;
@@ -335,7 +335,7 @@
             text-decoration: underline;
         }
 
-        /* Awards Grid */
+        /* Awards & Tech Skills Grid */
         .awards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -365,6 +365,22 @@
             font-size: 0.9rem;
             font-weight: 500;
             margin-bottom: 10px;
+        }
+
+        /* Skills Lists styling */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            color: #334155;
+        }
+
+        .skills-list strong {
+            color: var(--secondary);
         }
 
         /* Footer */
@@ -407,11 +423,14 @@
             </div>
             <h1>Arnold Chi Kedia</h1>
             <p>Senior HFC Design Engineer & GIS Analyst | Geoscientist | Educator</p>
+            <div style="margin-bottom: 15px; font-size: 0.95rem; opacity: 0.85;">
+                📍 Skiatook, Oklahoma, United States &bull; ✉️ <a href="mailto:kediaarnold@gmail.com" style="color: var(--emerald); text-decoration: none; font-weight: 600;">kediaarnold@gmail.com</a>
+            </div>
             <div class="social-links">
-                <a class="btn" href="https://news.asu.edu/20210114-asu-graduate-maps-new-life-us-finds-family-classmates" target="_blank">ASU News Profile</a>
-                <a class="btn" href="https://share.google/AnyWBY5AVDqVb4k8M" target="_blank">The New Normal (ASU News)</a>
+                <a class="btn" href="https://linkedin.com/in/arnold-kedia-0456887b" target="_blank">LinkedIn Profile</a>
                 <a class="btn" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">ResearchGate</a>
                 <a class="btn" href="https://scholar.google.com/citations?user=Gg_Qz1kAAAAJ" target="_blank">Google Scholar</a>
+                <a class="btn" href="https://news.asu.edu/20210114-asu-graduate-maps-new-life-us-finds-family-classmates" target="_blank">ASU Feature</a>
             </div>
         </div>
     </header>
@@ -430,7 +449,6 @@
                     </div>
                     <p>Developing network architecture with high spatial accuracy. Notable innovations include designing and deploying a <strong>nationwide rock scale grid</strong> to streamline excavation cost models across telecommunication routes.</p>
                     
-                    <!-- New Technical Day-to-Day Details -->
                     <ul class="card-details">
                         <li>Lead HFC/FTTH design integrity, specializing in NT2.0 transitions and complex node-split conflict resolution across regions.</li>
                         <li>Utilize GNIS and Cascade tooling to execute precise tracing across the Central and Southwest markets, aligning node boundaries dynamically.</li>
@@ -449,10 +467,38 @@
                     </div>
                     <p>Specializing in the geochemistry, microchemistry, and structural evolution of High-Purity Quartz (HPQ) veins, hydrothermal mineral systems, and petrogenesis in Pan-African structural systems.</p>
                     
-                    <!-- Dual-Track Academic Sync -->
                     <ul class="card-details">
                         <li>Active PhD researcher balancing academic manuscript preparation with real-world infrastructure mapping initiatives.</li>
                         <li>Co-presenter and co-author of advanced geoscientific and spatial GIS abstract integrations at the AGIC Symposium.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Focus & Expertise -->
+        <div class="timeline-section">
+            <h2 class="section-title">Fields of Expertise</h2>
+            <div class="awards-grid">
+                <div class="award-box" style="border-left-color: var(--accent);">
+                    <h4>Enterprise GIS & Spatial Analytics</h4>
+                    <ul class="skills-list" style="margin-top: 8px;">
+                        <li><strong>Platforms:</strong> ESRI ArcGIS Suite (ArcGIS Pro, ArcMap, AGOL), GNIS Smallworld, QGIS, Global Mapper</li>
+                        <li><strong>Drafting & Surface:</strong> AutoCAD, Surfer, Strater</li>
+                    </ul>
+                </div>
+                <div class="award-box" style="border-left-color: var(--accent);">
+                    <h4>Geosciences & Laboratory Work</h4>
+                    <ul class="skills-list" style="margin-top: 8px;">
+                        <li><strong>Geochemistry:</strong> Trace Element Geochemistry, Mineralogy, Fluid Inclusion Analytics</li>
+                        <li><strong>Spectroscopy & SEM:</strong> Electron Probe Microanalysis (EPMA), X-Ray Tomography, SEM</li>
+                        <li><strong>Field Analytics:</strong> Field Geophysics, Volcanic Hazard Mapping</li>
+                    </ul>
+                </div>
+                <div class="award-box" style="border-left-color: var(--accent);">
+                    <h4>Data Science & Remote Sensing</h4>
+                    <ul class="skills-list" style="margin-top: 8px;">
+                        <li><strong>Photogrammetry:</strong> Pix4D, Agisoft Metashape, LiDAR Processing</li>
+                        <li><strong>Programming & AI:</strong> Python, SQL, JavaScript for GIS, Random Forest Machine Learning</li>
                     </ul>
                 </div>
             </div>
@@ -462,7 +508,6 @@
         <div class="timeline-section">
             <h2 class="section-title">Honors & Awards</h2>
             <div class="awards-grid">
-                <!-- Award 1 -->
                 <div class="award-box">
                     <h4>Balling Family GIS Fellowship Endowment</h4>
                     <div class="award-subtitle">Arizona State University (2020)</div>
@@ -470,12 +515,18 @@
                         Awarded annually to one GIS graduate student demonstrating outstanding leadership, academic excellence, and technical innovation within the geographic information systems framework.
                     </p>
                 </div>
-                <!-- Award 2 -->
                 <div class="award-box">
-                    <h4>World Bank Scholar Travel Fellowship</h4>
-                    <div class="award-subtitle">Pan African Materials Institute (2017)</div>
+                    <h4>World Bank / Pan African Materials Institute Travel Fellowship</h4>
+                    <div class="award-subtitle">ASU Appointment (2017)</div>
                     <p style="font-size: 0.95rem; color: #334155;">
                         Prestigious travel grant awarded to select researchers to present material science, mineralogy, and economic geology developments to international technical cohorts.
+                    </p>
+                </div>
+                <div class="award-box">
+                    <h4>International Union for Geological Sciences (IUGS) Field Fellowship</h4>
+                    <div class="award-subtitle">Resourcing Future Generations Program, Eastern Cameroon (2016)</div>
+                    <p style="font-size: 0.95rem; color: #334155;">
+                        Appointed to perform strategic resource mapping and structural fieldwork modeling targeting regional sustainability.
                     </p>
                 </div>
             </div>
@@ -485,14 +536,12 @@
         <div class="timeline-section">
             <h2 class="section-title">Leadership & Team Collaboration</h2>
             <div class="awards-grid">
-                <!-- Box 1 -->
                 <div class="award-box" style="border-left-color: var(--emerald);">
                     <h4>🤝 Mentorship & Tool Advocacy</h4>
                     <p style="font-size: 0.95rem; color: #334155;">
                         Engage in recurring mentorship program initiatives on personal growth and work-life harmony. Act as a technical reviewer and internal evangelist for utility innovations, testing and reviewing tools like the FUSE splicing tool.
                     </p>
                 </div>
-                <!-- Box 2 -->
                 <div class="award-box" style="border-left-color: var(--emerald);">
                     <h4>⚡ High-Focus Work Patterns</h4>
                     <p style="font-size: 0.95rem; color: #334155;">
@@ -604,27 +653,27 @@
             <h2 class="section-title">A Journey of Resilience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2017</div>
-                    <p><strong>Visiting Scholar at ASU:</strong> Traveled to Arizona State University on a research grant as a geology doctoral student from the University of Buea, Cameroon. As civil conflict erupted in his home region, safety concerns prevented his return, prompting a complete life rebuild in the US.</p>
+                    <div class="timeline-date">2026 (Candidate)</div>
+                    <p><strong>Ph.D. in Geosciences:</strong> University of Buea, Cameroon. Dissertation completed and compiled; pre-defense and progress seminars scheduled for June 2026. Dissertation: <em>"Characteristics of shear zone-hosted high purity quartz: trace element content, fluid inclusion analysis, and P-T-t implications."</em></p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2019 - 2020</div>
-                    <p><strong>Academic & Communal Anchor:</strong> Enrolled in ASU's Master of Advanced Study in GIS (MAS-GIS). Balanced working full-time with a 4.0 GPA, receiving the prestigious <em>Balling Family GIS Fellowship Endowment</em>, while dedicating his personal time to tutoring, reviewing resumes, and prepping classmates for successful careers.</p>
+                    <p><strong>MAS-GIS (ASU):</strong> Master of Advanced Study in Geographic Information Systems at Arizona State University. Graduated with a 4.0 GPA, receiving the Balling Family GIS Fellowship Endowment Award. Capstone Thesis: <em>"Classification of Vegetation Species Along the Lower Salt River Using Unmanned Aircraft Systems and Deep Learning Neural Networks."</em></p>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2021</div>
-                    <p><strong>Telecom Career Launch:</strong> Began his career at Cox Communications as an HFC Design Engineer & GIS Analyst, while continuing to share his expertise with the next generation as a Part-time Faculty Associate at ASU.</p>
+                    <div class="timeline-date">2014</div>
+                    <p><strong>M.Sc. in Applied Geology:</strong> University of Buea, Cameroon. Thesis Title: <em>"High purity quartz with rutile/tourmaline disseminations in Southwestern Cameroon: structural disposition and electron microprobe analysis."</em></p>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">Present (2026)</div>
-                    <p><strong>Leadership & Innovation:</strong> Continues to innovate as a Senior HFC Design Engineer at Cox, executing major spatial initiatives like the nationwide rock excavation model, while actively co-authoring mineralogical manuscripts.</p>
+                    <div class="timeline-date">2011</div>
+                    <p><strong>B.S. in Geology:</strong> University of Buea, Cameroon (Minor in Petroleum Technology).</p>
                 </div>
             </div>
         </div>
 
-        <!-- Scientific Publications -->
+        <!-- Scientific Publications Directory -->
         <div class="timeline-section">
-            <h2 class="section-title">Selected Publications</h2>
+            <h2 class="section-title">Peer-Reviewed Publications</h2>
             <p style="text-align: center; color: #475569; margin-bottom: 25px;">
                 Find my complete bibliography on open research indexing services: 
                 <a href="https://scholar.google.com/citations?user=Gg_Qz1kAAAAJ" target="_blank" style="color: var(--emerald); font-weight: 600; text-decoration: none; margin-left: 5px;">Google Scholar Profile</a> | 
@@ -632,35 +681,79 @@
             </p>
             <ul class="pub-list">
                 <li class="pub-item">
-                    <div class="pub-title">An Integrated Spectral-Structural Workflow for Invasive Vegetation Mapping in an Arid Region Using Drones</div>
-                    <div class="pub-authors">Arnold Chi Kedia, Brandi Kapos, Songmei Liao, Jacob Draper, Justin Eddinger, Christopher Updike, Amy E. Frazier</div>
-                    <div class="pub-journal">Drones, MDPI (2021)</div>
-                    <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
-                        Developing a highly accurate workflow integrating multispectral drone photography with structural terrain models, raising targeted plant classification accuracy along the Salt River to 93%.
-                    </p>
-                    <a class="pub-link" href="https://www.researchgate.net/publication/349915782_An_Integrated_Spectral-Structural_Workflow_for_Invasive_Vegetation_Mapping_in_an_Arid_Region_Using_Drones" target="_blank">View on ResearchGate →</a>
+                    <div class="pub-title">Geochemical and textural evidence for the hydrothermal origin of tourmaline-rutile assemblages in the Supe Area, Southwestern Cameroon</div>
+                    <div class="pub-authors">Kedia, A. C., Etutu, M. E. M., Foba-Tendo, J., Ngatcha, R. B., & Suh, C. E.</div>
+                    <div class="pub-journal">Journal of the Cameroon Academy of Sciences, 22(3) (2026)</div>
+                    <a class="pub-link" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">View on ResearchGate →</a>
                 </li>
-                
+                <li class="pub-item">
+                    <div class="pub-title">A mineralogical and geochemical approach to characterizing changes in urban agrarian wetlands: case study of the Mfoundi floodplain sediments, Yaoundé, Cameroon</div>
+                    <div class="pub-authors">Ngwanwi, E. N., Takem, N. L., Suh, C. E., & Kedia, A. C.</div>
+                    <div class="pub-journal">Environmental Earth Sciences (2026)</div>
+                    <a class="pub-link" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">View on ResearchGate →</a>
+                </li>
                 <li class="pub-item">
                     <div class="pub-title">The Potential of Quartzitic Veins in SW Cameroon for High-Purity Quartz</div>
-                    <div class="pub-authors">Ngambu Aloysius Afahnwie, Arnold Chi Kedia, Cheo Emmanuel Suh, Cyrille Sigue, Elisha Mutum Shemang</div>
-                    <div class="pub-journal">International Journal of Geosciences (2022)</div>
-                    <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
-                        Mapping and utilizing X-ray microtomography, SEM, and electron microprobes to evaluate trace elements and inclusions within the Supe quartzitic veins for semiconductor and solar industry suitability.
-                    </p>
-                    <a class="pub-link" href="https://www.researchgate.net/publication/360122207_The_Potential_of_Quartzitic_Veins_in_SW_Cameroon_for_High-Purity_Quartz" target="_blank">View on ResearchGate →</a>
+                    <div class="pub-authors">Ngambu, A. A., Kedia, A. C., Suh, C. E., Sigue, C., & Shemang, E. M.</div>
+                    <div class="pub-journal">International Journal of Geosciences, 13(4) (2022)</div>
+                    <a class="pub-link" href="https://doi.org/10.4236/ijg.2022.134015" target="_blank">View on ResearchGate →</a>
                 </li>
-
                 <li class="pub-item">
-                    <div class="pub-title">Geochemical and Textural Evidence for the Hydrothermal Origin of Tourmaline-Rutile Assemblages in the Supe Area, Southwestern Cameroon</div>
-                    <div class="pub-authors">Ngambu Aloysius Afahnwie, Arnold Chi Kedia, Cheo Emmanuel Suh, Cyrille Sigue</div>
-                    <div class="pub-journal">Journal of the Cameroon Academy of Sciences (2026)</div>
-                    <p style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
-                        Deciphering structural control, fluid history, and micro-chemical evolution of rutilated quartz specimens and tourmaline crystallization.
-                    </p>
+                    <div class="pub-title">An Integrated Spectral-Structural Workflow for Invasive Vegetation Mapping in an Arid Region Using Drones</div>
+                    <div class="pub-authors">Arnold Chi Kedia, Brandi Kapos, Songmei Liao, Jacob Draper, Justin Eddinger, Christopher Updike, Amy E. Frazier</div>
+                    <div class="pub-journal">Drones, MDPI, 5(1) (2021)</div>
+                    <a class="pub-link" href="https://doi.org/10.3390/drones5010019" target="_blank">View on ResearchGate →</a>
+                </li>
+                <li class="pub-item">
+                    <div class="pub-title">Quartz-Rich Fault Rocks as Potential High Purity Quartz Source (I) in a Sequence of the Central Cameroon Shear Zone (Etam Shear Zone): Geology and Structure</div>
+                    <div class="pub-authors">Sigue, C., Moundi, A., Ndema Mbongue, L., Vishiti, A., Kedia, A. C., Suh, C. E., & Nzenti, J. P.</div>
+                    <div class="pub-journal">The Structural Geology Contribution to the Africa-Eurasia Geology, Springer (2018)</div>
                     <a class="pub-link" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">View on ResearchGate →</a>
                 </li>
             </ul>
+        </div>
+
+        <!-- Academic & Professional References Section -->
+        <div class="timeline-section">
+            <h2 class="section-title">Professional References</h2>
+            <div class="awards-grid">
+                <!-- Reference 1 -->
+                <div class="award-box" style="border-left-color: var(--primary);">
+                    <h4>Prof. Cheo Emmanuel Suh, PhD</h4>
+                    <div class="award-subtitle">Academic Mentor & Doctoral Chair</div>
+                    <p style="font-size: 0.9rem; color: #475569;">
+                        Deputy Vice-Chancellor, University of Bamenda <br>
+                        ✉️ <a href="mailto:chuhma@yahoo.com" style="color: var(--accent); text-decoration: none;">chuhma@yahoo.com</a>
+                    </p>
+                </div>
+                <!-- Reference 2 -->
+                <div class="award-box" style="border-left-color: var(--primary);">
+                    <h4>Dr. Terry L. Alford</h4>
+                    <div class="award-subtitle">Associate Director and Professor</div>
+                    <p style="font-size: 0.9rem; color: #475569;">
+                        SEMTE, Arizona State University <br>
+                        ✉️ <a href="mailto:TA@asu.edu" style="color: var(--accent); text-decoration: none;">TA@asu.edu</a>
+                    </p>
+                </div>
+                <!-- Reference 3 -->
+                <div class="award-box" style="border-left-color: var(--primary);">
+                    <h4>Amy E. Frazier, PhD</h4>
+                    <div class="award-subtitle">Professor & Dangermond Chair</div>
+                    <p style="font-size: 0.9rem; color: #475569;">
+                        University of California Santa Barbara <br>
+                        ✉️ <a href="mailto:Amy.Frazier@ucsb.edu" style="color: var(--accent); text-decoration: none;">Amy.Frazier@ucsb.edu</a>
+                    </p>
+                </div>
+                <!-- Reference 4 -->
+                <div class="award-box" style="border-left-color: var(--primary);">
+                    <h4>Shea Lemar</h4>
+                    <div class="award-subtitle">Deputy State Cartographer</div>
+                    <p style="font-size: 0.9rem; color: #475569;">
+                        Arizona State Land Department <br>
+                        ✉️ <a href="mailto:shea.lemar@asu.edu" style="color: var(--accent); text-decoration: none;">shea.lemar@asu.edu</a>
+                    </p>
+                </div>
+            </div>
         </div>
 
     </div>
