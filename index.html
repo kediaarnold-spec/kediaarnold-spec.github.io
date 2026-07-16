@@ -230,6 +230,40 @@
             top: 0;
         }
 
+        /* Custom Scientific Figure Gallery */
+        .geology-gallery {
+            display: flex;
+            background: #1e293b;
+            border-bottom: 1px solid var(--border-color);
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .geology-gallery img {
+            width: 50% !important;
+            height: 100% !important;
+            object-fit: cover;
+            object-position: center;
+            transition: var(--transition);
+            cursor: zoom-in;
+        }
+
+        .geology-gallery img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .geology-gallery {
+                flex-direction: column;
+                height: auto;
+            }
+            .geology-gallery img {
+                width: 100% !important;
+                height: 180px !important;
+            }
+        }
+
         /* Expertise Section */
         .skills-grid {
             display: grid;
@@ -414,308 +448,3 @@
             font-size: 1.15rem;
             color: var(--primary);
             margin-bottom: 4px;
-        }
-
-        .timeline-content p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* References Grid */
-        .references-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .ref-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border-color);
-        }
-
-        .ref-card h4 {
-            color: var(--primary);
-            font-size: 1rem;
-            margin-bottom: 2px;
-        }
-
-        .ref-card .title {
-            font-size: 0.85rem;
-            color: var(--accent);
-            margin-bottom: 12px;
-        }
-
-        .ref-card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Media specifics */
-        .media-flex {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .media-img {
-            width: 150px;
-            height: 100px;
-            border-radius: 8px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        @media (max-width: 600px) {
-            .media-flex {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .media-img {
-                width: 100%;
-                height: 150px;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: #94a3b8;
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header Block -->
-    <header>
-        <div class="container">
-            <img alt="Arnold Chi Kedia" src="Profile.jpg">
-            <h1>Arnold Chi Kedia</h1>
-            <p>Senior HFC Design Engineer & GIS Analyst | Geoscientist | Educator</p>
-            <div class="contact-info">
-                <span>📍 Skiatook, Oklahoma, United States</span>
-            </div>
-            <div class="social-links">
-                <a class="btn-social" href="https://linkedin.com/in/arnold-kedia-0456887b" target="_blank">LinkedIn</a>
-                <a class="btn-social" href="https://www.instagram.com/artkedia?igsh=MXZjNTNicWhwaHlxMQ==" target="_blank">🎨 Art Gallery</a>
-                <a class="btn-social" href="https://www.researchgate.net/profile/Arnold-Chi-Kedia" target="_blank">ResearchGate</a>
-                <a class="btn-social" href="https://scholar.google.com/citations?user=Gg_Qz1kAAAAJ" target="_blank">Google Scholar</a>
-                <a class="btn-social" href="https://news.asu.edu/20210114-asu-graduate-maps-new-life-us-finds-family-classmates" target="_blank">ASU Feature</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <main class="container">
-
-        <!-- Work Experience -->
-        <section>
-            <h2 class="section-title">Utility Design & GIS</h2>
-            <div class="work-grid">
-                <!-- Card 1 -->
-                <div class="work-card">
-                    <img alt="GIS & Networks" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80">
-                    <div class="work-card-content">
-                        <h3>Utility Design & GIS</h3>
-                        <h4>Cox Communications</h4>
-                        <p>Developing network architecture with high spatial accuracy. Notable innovations include designing and deploying a <strong>nationwide rock scale grid</strong> to streamline excavation cost models across telecommunication routes.</p>
-                        <ul>
-                            <li>Lead HFC/FTTH design integrity, specializing in NT2.0 transitions and complex node-split conflict resolution across regions.</li>
-                            <li>Utilize GNIS and Cascade tooling to execute precise tracing across the Central and Southwest markets.</li>
-                            <li>Author formal Methods & Procedures (M&P) detailing optimized QGIS spatial extraction workflows.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="work-card">
-                    <img alt="Microscopic Quartz Structure / Microprobe Micrograph" src="https://images.unsplash.com/photo-1615627186482-139c8c779df3?auto=format&fit=crop&w=600&q=80">
-                    <div class="work-card-content">
-                        <h3>Geological Sciences</h3>
-                        <h4>Ph.D. Candidate & Researcher</h4>
-                        <p>Specializing in the geochemistry, microchemistry, and structural evolution of High-Purity Quartz (HPQ) veins, hydrothermal mineral systems, and petrogenesis in Pan-African structural systems.</p>
-                        <ul>
-                            <li>Active PhD researcher balancing academic manuscript preparation with real-world infrastructure mapping initiatives.</li>
-                            <li>Co-presenter and co-author of advanced geoscientific and spatial GIS abstract integrations at the AGIC Symposium.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Fields of Expertise -->
-        <section>
-            <h2 class="section-title">Fields of Expertise</h2>
-            <div class="skills-grid">
-                <div class="skills-category">
-                    <h4>Enterprise GIS & Spatial Analytics</h4>
-                    <ul>
-                        <li><strong>Platforms:</strong> ESRI ArcGIS Suite (ArcGIS Pro, ArcMap, AGOL), GNIS Smallworld, QGIS, Global Mapper</li>
-                        <li><strong>Drafting & Surface:</strong> AutoCAD, Surfer, Strater</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h4>Geosciences & Laboratory Work</h4>
-                    <ul>
-                        <li><strong>Geochemistry:</strong> Trace Element Geochemistry, Mineralogy, Fluid Inclusion Analytics</li>
-                        <li><strong>Spectroscopy & SEM:</strong> Electron Probe Microanalysis (EPMA), X-Ray Tomography, SEM</li>
-                        <li><strong>Field Analytics:</strong> Field Geophysics, Volcanic Hazard Mapping</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h4>Data Science & Remote Sensing</h4>
-                    <ul>
-                        <li><strong>Photogrammetry:</strong> Pix4D, Agisoft Metashape, LiDAR Processing</li>
-                        <li><strong>Programming & AI:</strong> Python, SQL, JavaScript for GIS, Random Forest Machine Learning</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Spotlight Highlights -->
-        <section>
-            <h2 class="section-title">CoxOne Employee Spotlight</h2>
-            <div class="spotlight-layout">
-                <!-- Integrated Spotlight Article Snapshot -->
-                <img class="spotlight-featured-img" alt="CoxOne Spotlight Article Snippet" src="208096.png">
-                
-                <div class="spotlight-grid">
-                    <div class="spotlight-card">
-                        <img alt="Mapping software" src="https://images.unsplash.com/photo-1541462608141-2ff01dd914e0?auto=format&fit=crop&w=400&q=80">
-                        <div class="spotlight-info">
-                            <h4>💡 "Accidental" GIS</h4>
-                            <p>Taught myself GIS software out of pure resourcefulness as a student when I couldn't afford a cartographer.</p>
-                        </div>
-                    </div>
-                    <div class="spotlight-card">
-                        <img alt="Artist palette" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=400&q=80">
-                        <div class="spotlight-info">
-                            <h4>🎨 Two Canvases</h4>
-                            <p>A unique balance: designing telecom routing grids on my monitors, and painting landscape fine art on traditional canvas.</p>
-                            <a href="https://www.instagram.com/artkedia?igsh=MXZjNTNicWhwaHlxMQ==" target="_blank" style="display: inline-block; margin-top: 10px; font-size: 0.8rem; font-weight: 600;">View Portfolio on Instagram →</a>
-                        </div>
-                    </div>
-                    <div class="spotlight-card">
-                        <img alt="Grounded perspective" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80">
-                        <div class="spotlight-info">
-                            <h4>🌍 Resilience</h4>
-                            <p>Pivoting with optimism after war disrupted my PhD plans. Solving real-world spatial problems never feels like hard work.</p>
-                        </div>
-                    </div>
-                    <div class="spotlight-card">
-                        <img alt="Team synergy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80">
-                        <div class="spotlight-info">
-                            <h4>🏆 Leadership</h4>
-                            <p>Commended for bringing an "infectious smile" and rapid mastery of complex FTTH concepts to the core utility design department.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Honors & Awards -->
-        <section>
-            <h2 class="section-title">Honors & Awards</h2>
-            <div class="row-list">
-                <div class="row-item">
-                    <h4>Balling Family GIS Fellowship Endowment</h4>
-                    <div class="row-meta">Arizona State University (2020)</div>
-                    <p>Awarded annually to one GIS graduate student demonstrating outstanding leadership, academic excellence, and technical innovation within the geographic information systems framework.</p>
-                </div>
-                <div class="row-item">
-                    <h4>World Bank / Pan African Materials Institute Travel Fellowship</h4>
-                    <div class="row-meta">ASU Appointment (2017)</div>
-                    <p>Prestigious travel grant awarded to select researchers to present material science, mineralogy, and economic geology developments to international technical cohorts.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Media & Features -->
-        <section>
-            <h2 class="section-title">Media & Podcast Features</h2>
-            <div class="row-list">
-                <div class="row-item">
-                    <div class="media-flex">
-                        <img class="media-img" alt="Drone over valley" src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80">
-                        <div>
-                            <h4>Drones and A.I. Hunting Down Invasive Plants at Salt River</h4>
-                            <div class="row-meta">ABC15 Arizona News Feature</div>
-                            <p>An inside look at how high-precision drone technology, multispectral sensors, and machine learning models identified invasive species with 93% accuracy along the Salt River.</p>
-                            <a href="https://www.abc15.com/news/state/drones-and-a-i-hunting-down-invasive-plants-at-salt-river" target="_blank">Read Article →</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row-item">
-                    <h4>GIS Chat Podcast Ep. 4 & Update Episodes</h4>
-                    <div class="row-meta">With Jazzmen Wilson</div>
-                    <p>Covering the transition from applied geology to utility telecom GIS, and later covering promotions and the creation of the nationwide rock excavation database model.</p>
-                    <a href="https://gischatpodcast.buzzsprout.com/" target="_blank">Listen to Podcast →</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education & Timeline -->
-        <section>
-            <h2 class="section-title">A Journey of Resilience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2026 (Candidate)</div>
-                    <div class="timeline-content">
-                        <h3>Ph.D. in Geosciences</h3>
-                        <p>University of Buea, Cameroon. Dissertation completed and compiled; pre-defense and progress seminars scheduled for June 2026. Dissertation: <em>"Characteristics of shear zone-hosted high purity quartz: trace element content, fluid inclusion analysis, and P-T-t implications."</em></p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2019 - 2020</div>
-                    <div class="timeline-content">
-                        <h3>MAS-GIS (ASU)</h3>
-                        <p>Master of Advanced Study in Geographic Information Systems at Arizona State University. Graduated with a 4.0 GPA, receiving the Balling Family GIS Fellowship Endowment Award.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2014</div>
-                    <div class="timeline-content">
-                        <h3>M.Sc. in Applied Geology</h3>
-                        <p>University of Buea, Cameroon. Focus on structural disposition and electron microprobe analysis of high purity quartz.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional References -->
-        <section>
-            <h2 class="section-title">Professional References</h2>
-            <div class="references-grid">
-                <div class="ref-card">
-                    <h4>Prof. Cheo Emmanuel Suh, PhD</h4>
-                    <div class="title">Academic Mentor & Chair</div>
-                    <p>Deputy Vice-Chancellor, University of Bamenda <br> ✉️ <a href="mailto:chuhma@yahoo.com">chuhma@yahoo.com</a></p>
-                </div>
-                <div class="ref-card">
-                    <h4>Dr. Terry L. Alford</h4>
-                    <div class="title">Associate Director & Professor</div>
-                    <p>SEMTE, Arizona State University <br> ✉️ <a href="mailto:TA@asu.edu">TA@asu.edu</a></p>
-                </div>
-                <div class="ref-card">
-                    <h4>Amy E. Frazier, PhD</h4>
-                    <div class="title">Professor & Dangermond Chair</div>
-                    <p>University of California Santa Barbara <br> ✉️ <a href="mailto:Amy.Frazier@ucsb.edu">Amy.Frazier@ucsb.edu</a></p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer Block -->
-    <footer>
-        <div class="container">
-            <p>© 2026 Arnold Chi Kedia. Built with precision and creativity.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
